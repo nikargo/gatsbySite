@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tracking Wake the Giant</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <style>
+      .center {
+        margin: auto;
+        width: 60%;
+        padding: 10px;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      src="https://cdn.pydata.org/bokeh/release/bokeh-1.3.4.min.js"
+    ></script>
+    <script type="text/javascript">
+      Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <h3 class="center">Tracking Wake the Giant</h3>
+    <div class="center">Masters Thesis - Shannon Kitley</div>
+    <div
+      class="bk-root center"
+      id="5e90a2c2-b16c-4191-912d-b3a4952655f6"
+      data-root-id="1003"
+    ></div>
+    <script type="application/json" id="1133">
+      {
+        "f8230f40-e729-4126-8aef-40623c9db716": {
+          "roots": {
+            "references": [
+              {
+                "attributes": {
+                  "callback": null,
+                  "end": -9927641,
+                  "start": -9942000
+                },
+                "id": "1004",
+                "type": "Range1d"
+              },
+              {
+                "attributes": {
+                  "below": [{ "id": "1012", "type": "MercatorAxis" }],
+                  "center": [
+                    { "id": "1020", "type": "Grid" },
+                    { "id": "1029", "type": "Grid" }
+                  ],
+                  "left": [{ "id": "1021", "type": "MercatorAxis" }],
+                  "renderers": [
+                    { "id": "1045", "type": "TileRenderer" },
+                    { "id": "1050", "type": "GlyphRenderer" }
+                  ],
+                  "title": { "id": "1053", "type": "Title" },
+                  "toolbar": { "id": "1037", "type": "Toolbar" },
+                  "x_range": { "id": "1004", "type": "Range1d" },
+                  "x_scale": { "id": "1008", "type": "LinearScale" },
+                  "y_range": { "id": "1006", "type": "Range1d" },
+                  "y_scale": { "id": "1010", "type": "LinearScale" }
+                },
+                "id": "1003",
+                "subtype": "Figure",
+                "type": "Plot"
+              },
+              {
+                "attributes": {
+                  "formatter": {
+                    "id": "1024",
+                    "type": "MercatorTickFormatter"
+                  },
+                  "ticker": { "id": "1022", "type": "MercatorTicker" }
+                },
+                "id": "1021",
+                "type": "MercatorAxis"
+              },
+              {
+                "attributes": {
+                  "source": { "id": "1002", "type": "ColumnDataSource" }
+                },
+                "id": "1051",
+                "type": "CDSView"
+              },
+              { "attributes": {}, "id": "1031", "type": "WheelZoomTool" },
+              {
+                "attributes": {
+                  "data_source": { "id": "1002", "type": "ColumnDataSource" },
+                  "glyph": { "id": "1048", "type": "Circle" },
+                  "hover_glyph": null,
+                  "muted_glyph": null,
+                  "nonselection_glyph": { "id": "1049", "type": "Circle" },
+                  "selection_glyph": null,
+                  "view": { "id": "1051", "type": "CDSView" }
+                },
+                "id": "1050",
+                "type": "GlyphRenderer"
+              },
+              { "attributes": {}, "id": "1035", "type": "HelpTool" },
+              {
+                "attributes": {
+                  "callback": null,
+                  "end": 6156000,
+                  "start": 6194000
+                },
+                "id": "1006",
+                "type": "Range1d"
+              },
+              {
+                "attributes": {
+                  "tile_source": { "id": "1001", "type": "WMTSTileSource" }
+                },
+                "id": "1045",
+                "type": "TileRenderer"
+              },
+              { "attributes": { "text": "" }, "id": "1053", "type": "Title" },
+              {
+                "attributes": {
+                  "attribution": "&amp;copy; &lt;a href=\"https://www.openstreetmap.org/copyright\"&gt;OpenStreetMap&lt;/a&gt; contributors,&amp;copy; &lt;a href=\"https://cartodb.com/attributions\"&gt;CartoDB&lt;/a&gt;",
+                  "url": "https://tiles.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+                },
+                "id": "1001",
+                "type": "WMTSTileSource"
+              },
+              {
+                "attributes": {
+                  "bottom_units": "screen",
+                  "fill_alpha": { "value": 0.5 },
+                  "fill_color": { "value": "lightgrey" },
+                  "left_units": "screen",
+                  "level": "overlay",
+                  "line_alpha": { "value": 1.0 },
+                  "line_color": { "value": "black" },
+                  "line_dash": [4, 4],
+                  "line_width": { "value": 2 },
+                  "render_mode": "css",
+                  "right_units": "screen",
+                  "top_units": "screen"
+                },
+                "id": "1058",
+                "type": "BoxAnnotation"
+              },
+              {
+                "attributes": {
+                  "callback": null,
+                  "tooltips": [
+                    ["Business", "@business"],
+                    ["Address", "@address"]
+                  ]
+                },
+                "id": "1036",
+                "type": "HoverTool"
+              },
+              {
+                "attributes": {
+                  "fill_color": { "value": "#1f77b4" },
+                  "line_color": { "value": "#1f77b4" },
+                  "size": { "units": "screen", "value": 8 },
+                  "x": { "field": "x" },
+                  "y": { "field": "y" }
+                },
+                "id": "1048",
+                "type": "Circle"
+              },
+              {
+                "attributes": { "dimension": "lat" },
+                "id": "1022",
+                "type": "MercatorTicker"
+              },
+              {
+                "attributes": {
+                  "formatter": {
+                    "id": "1015",
+                    "type": "MercatorTickFormatter"
+                  },
+                  "ticker": { "id": "1013", "type": "MercatorTicker" }
+                },
+                "id": "1012",
+                "type": "MercatorAxis"
+              },
+              {
+                "attributes": {
+                  "callback": null,
+                  "data": {
+                    "address": [
+                      "314 Bay St",
+                      "221 Bay St",
+                      "226 Ambrose St",
+                      "281 Bay St",
+                      "196 Algoma St. S",
+                      "273 Algoma St S",
+                      "129 Algoma St S",
+                      "142 Algoma St S",
+                      "406 Cumberland Street N.",
+                      "194 Algoma St S.",
+                      "205 Algoma St S",
+                      "280 Park Ave",
+                      "449 Hodder Ave",
+                      "640 River St",
+                      "290 Memorial Ave",
+                      "1159 Alloy Dr",
+                      "1001 William St",
+                      "2600 Arthur St E",
+                      "201 Frederica St W",
+                      "292 Court St S",
+                      "278 Bay St",
+                      "955 Oliver Road",
+                      "955 Oliver Road",
+                      "955 Oliver Road",
+                      "955 Oliver Road",
+                      "516 Victoria Ave E",
+                      "562 Red River Rd",
+                      "14 Balsam St",
+                      "223 Algoma St S",
+                      "425 Northern Ave",
+                      "846 MacDonell Street",
+                      "955 Oliver Rd",
+                      "11 St Paul St",
+                      "34 Cumberland St N",
+                      "850 May St N",
+                      "1046 Lithium Dr",
+                      "959 Fort William Rd",
+                      "201 Kelner Place",
+                      "71 Algoma Street South",
+                      "955 Alloy Drive",
+                      "318 Syndicate Avenue South",
+                      "139 Frederica St W",
+                      "6 Cumberland St S",
+                      "297 Park Ave",
+                      "801 Red River Rd",
+                      "10 Court St S",
+                      "1450 Nakina Dr",
+                      "627 Squier St",
+                      "209 Red River Rd",
+                      "118 Frederica St W",
+                      "500 Donald St E",
+                      "32 St Paul St",
+                      "17 Cumberland St N",
+                      "16 Court St S",
+                      "16 St Paul St",
+                      "242 Red River Rd",
+                      "206 Park Ave",
+                      "701-34 Cumberland St N",
+                      "115 Cumberland St N",
+                      "239 Red River Rd",
+                      "271 Bay St",
+                      "8 Court St S",
+                      "18 Court St S",
+                      "200 Red River Rd",
+                      "940 Memorial Ave",
+                      "545 11th Avenue",
+                      "16 Cumberland St S",
+                      "2 Court St S",
+                      "409 George St",
+                      "850 May St N",
+                      "3386 Oliver Rd",
+                      "278 Bay St",
+                      "270 Cumberland St N",
+                      "620 Victoria Ave E",
+                      "819 Gore St W",
+                      "285 Bay St",
+                      "965A, Cobalt Crescent",
+                      "314 Bay St",
+                      "219 Algoma St S",
+                      "4 Balsam St",
+                      "425 Donald St E",
+                      "177 Red River Road",
+                      "610 Simpson St",
+                      "314 Bay St",
+                      "10 Farrand St",
+                      "563 Candy Mountain Drive",
+                      "1216 Dawson Rd",
+                      "350 Hector Dougall Way",
+                      "1480 Walsh St W",
+                      "63 Algoma St N",
+                      "1475 Walsh St W",
+                      "600 Harbour Expy",
+                      "640 River St",
+                      "425 Edward St N",
+                      "544 Winnipeg Ave",
+                      "8A Cumberland St N",
+                      "1145 Commerce St",
+                      "315 Syndicate Av S",
+                      "311 Cumberland St N",
+                      "604 City Rd",
+                      "313 Bay St",
+                      "516 Victoria Ave E",
+                      "1315 Crawford Ave",
+                      "551 10th Ave",
+                      "73 Cumberland St N",
+                      "37 Cumberland St S",
+                      "960 Alloy Dr",
+                      "16 Cumberland St S",
+                      "270 Bay Street",
+                      "104 Frederica St E",
+                      "1260 Golf Links Rd",
+                      "459 Victoria Ave W",
+                      "1000 Fort William Rd",
+                      "598 Arthur St W",
+                      "679 Memorial Ave",
+                      "86 Brent St",
+                      "704 McKenzie St",
+                      "605 Hewitson St",
+                      "86 Cumberland St S",
+                      "1072 Oliver Rd",
+                      "859 Fort William Rd",
+                      "867 Tungsten St",
+                      "420 Winnipeg Ave",
+                      "180 Martha St",
+                      "130 Churchill Dr W",
+                      "609 James St N",
+                      "1000 Fort William Road",
+                      "176 Algoma St S",
+                      "610 Arthur St W",
+                      "264 Red River Rd",
+                      "669 Beaverhall Pl",
+                      "1281 Arthur St W",
+                      "63 Algoma St N",
+                      "977 Alloy Dr",
+                      "320 Bay St",
+                      "201 Algoma St S",
+                      "811 Central Av",
+                      "894 Alloy Pl",
+                      "294 Red River Rd",
+                      "125 S. Lillie Street",
+                      "100 Princess St",
+                      "211 Clarke St",
+                      "140 Clarkson Street S.",
+                      "145 Churchill Drive W",
+                      "301 Archibald st N",
+                      "49 Cumberland St S",
+                      "581 Red River Rd",
+                      "560 Arthur St W",
+                      "179 Algoma St S",
+                      "975 Alloy Dr",
+                      "1010 Dawson Rd",
+                      "212 Villa St",
+                      "1116 Waterford St",
+                      "1185 Roland St",
+                      "245B Bay St",
+                      "130 Conservation Rd",
+                      "136 McKellar St N",
+                      "4 Balsam St",
+                      "859 Fort William Rd",
+                      "256 Red River Rd",
+                      "1020 Dawson Rd",
+                      "425 Edward St N",
+                      "245B Bay St",
+                      "101 N Syndicate Ave N",
+                      "182 Algoma St. S",
+                      "117 May St S",
+                      "977 Alloy",
+                      "540 Central Ave",
+                      "142 Algoma St S",
+                      "283 Lisgar St",
+                      "611 Squier St",
+                      "1094 Memorial Ave",
+                      "509 Edward St N",
+                      "234 Van Norman St",
+                      "720 Red River Rd",
+                      "327 Cumberland St N",
+                      "308 Red River Rd",
+                      "450 Fort William Rd",
+                      "717 John Street",
+                      "1501 Dease Street",
+                      "686 Squier St",
+                      "285 Red River Rd",
+                      "221 Wilson St",
+                      "213 Miles St E",
+                      "168 Algoma St S",
+                      "73 Cumberland St N",
+                      "710 Balmoral St B"
+                    ],
+                    "business": [
+                      "Seek Adventure and Tours",
+                      "Bay Village Coffee",
+                      "The Haven Hostel",
+                      "Tea Horse",
+                      "D\u00e9j\u00e0 vu Consignment",
+                      "Sand and Sea",
+                      "Lakehead Unitarian Fellowship",
+                      "Bay Credit Union - Algoma",
+                      "Bay Credit Union - Cumberland",
+                      "Bean Fiend Cafe",
+                      "International House of Tea",
+                      "The Creative",
+                      "RBC - Hodder",
+                      "RBC - Grandview Mall",
+                      "RBC - Memorial",
+                      "RBC - Alloy",
+                      "RBC Dominion Securities",
+                      "RBC - Arthur",
+                      "RBC - Frederica",
+                      "Bingwi Neygashi Anishnawbe Family Centre - Satellite Center",
+                      "Jewels of Crown",
+                      "Lakehead University Orientation",
+                      "Lakehead University Bookstore",
+                      "Lakehead University Student Union",
+                      "Lakehead University",
+                      "Uride",
+                      "Eco Superior",
+                      "Georges Market",
+                      "Pineapple Express",
+                      "Kombaya Kombucha",
+                      "Vince Mirabelli Real Estate",
+                      "Lakehead Athletics",
+                      "St Pauls Roastery",
+                      "Thunder Bay Chamber of Commerce",
+                      "Sister Bear Designs",
+                      "Tbaytel - Adminstrative Office",
+                      "Tbaytel - Store",
+                      "Wasaya Airlines",
+                      "Copperfin Credit - Algoma",
+                      "Copperfin Credit - Harbour",
+                      "Copperfin Credit - Syndicate",
+                      "Westfort Films",
+                      "Ungalli Clothing Cp.",
+                      "Both Hands Pizza",
+                      "Eat Local Pizza",
+                      "Sweet North Bakery",
+                      "Confederation College",
+                      "Outland",
+                      "Barbecupid",
+                      "The Sal",
+                      "City of Thunder Bay",
+                      "Roosters",
+                      "Prince Arthur Hotel",
+                      "Perfect Fit",
+                      "La Poutine",
+                      "The Foundry",
+                      "The Chanterelle",
+                      "Tourism Thunder Bay",
+                      "Definately Superior",
+                      "The Apollo Bar",
+                      "Sweet Escape",
+                      "Ritual Skin Co.",
+                      "Ahnisnabae Art Gallery",
+                      "Prime Gelato",
+                      "Half-Way Motors Nissan",
+                      "CARSTAR",
+                      "Red Lion Smokehouse",
+                      "The Loop",
+                      "7 generations Education Institute",
+                      "Pieology",
+                      "Thunder Pride Farm",
+                      "Nine Sixty Group",
+                      "Rose N Crantz Roasting Company",
+                      "Larson Lawyers",
+                      "Maid for the Bride",
+                      "Thuja Floral Design",
+                      "Daytonas",
+                      "The Walleye",
+                      "Thunder Bay Nauropathic Clinic",
+                      "The Painted Turtle Art Shop",
+                      "Silent Society Studios",
+                      "Baggage Building Arts Centre",
+                      "Superior Screen Printing",
+                      "Hoito",
+                      "Our Saviour\u2019s Lutheran Church",
+                      "Belluz Farms",
+                      "Kelly Mental Health",
+                      "North Air Star",
+                      "North Air Star",
+                      "Umbrella Clinic",
+                      "Happy Time Tours and Travel",
+                      "Wine Rack",
+                      "Wine Rack",
+                      "Communities Coming Together for Children",
+                      "Thunder Bay Counselling",
+                      "Matthews Dagsvik Law",
+                      "Thunder Bay Truck Center Inc.",
+                      "John Howard Society",
+                      "Wakefield Oil Change Plus",
+                      "THP Variety &amp; Gas Bar",
+                      "Authentique Gift Shop",
+                      "Freaks and Geeks Cafe and Gallery",
+                      "Shine Photo",
+                      "KUHL Lighting &amp; Dekor",
+                      "Blue Harbour Financial",
+                      "Shout Media",
+                      "Sullivan + Associates Clinnical Psychology",
+                      "La Luna Wellness Studio",
+                      "Evoke Salon and Spa",
+                      "Signs Now",
+                      "Bayshore Home Health",
+                      "Thunder Bay Catholic School Board",
+                      "Taco Time",
+                      "Taco Time",
+                      "Taco Time",
+                      "Brent Park Store",
+                      "Our Kids Count",
+                      "DST Consulting Engineers Inc.",
+                      "Kinna-aweya Legal Clinic",
+                      "Botanica Luxury Spa and Salon",
+                      "Leading Edge Gym",
+                      "Half-Way Motors Mazda",
+                      "Canada Games Complex",
+                      "Volunteer Pool",
+                      "Churchill Pool",
+                      "Kinsmen Youth Centre",
+                      "The Body Shop",
+                      "BrickHost",
+                      "Naxos Bar &amp; Grill",
+                      "Lovely Body",
+                      "Origin",
+                      "Scandinavian Deli",
+                      "Thunder Bay Diagnostics Inc",
+                      "SUPERIOR Home Health Care",
+                      "Rebel Salad",
+                      "The Growing Season",
+                      "Central Car Wash and Detail Centre",
+                      "Gear Up for Outdoors",
+                      "St. Andrew\u2019s Dew Drop In",
+                      "Adult Learning Centre",
+                      "Thunder Bay Airport",
+                      "Little Lions Waldorf - Clarke",
+                      "Little Lions Waldorf - St. Pius X School",
+                      "Little Lions Waldorf - Agnew H. Johnston School",
+                      "Little Lions Waldorf - McKellar Public School",
+                      "Olives and Bananas",
+                      "Northern Credit Union",
+                      "Northern Credit Union",
+                      "Afloat Wellness",
+                      "Scholars Education Centre",
+                      "Landmark Inn",
+                      "Maternity Care Midwives",
+                      "YES Employment Services",
+                      "Tents &amp; Events",
+                      "Lutheran Community Care Centre",
+                      "Lakehead Region Conservation Authority",
+                      "Courtis Desmoulin Law",
+                      "The Nest Studio",
+                      "Bank of Montreal - Thunder Center",
+                      "Bank of Montreal - Red River",
+                      "Bank of Montreal - Dawson",
+                      "Bank of Montreal - Northwoof Park Plaza",
+                      "Lutheran Community Care Centre",
+                      "Anishnawbe Mushkiki Aboriginal Health Access Access Centre",
+                      "Fireweed Crafts",
+                      "The Pasta Shoppe",
+                      "Ultimate Gymnastics",
+                      "Lowerys",
+                      "Bay Credit Union Limited",
+                      "Children\u2019s Centre Thunder Bay Locations",
+                      "HealthTec Training",
+                      "Exquisite Gold &amp; Gems",
+                      "Natural Smiles The Dental Hygiene Boutique",
+                      "Centre francophone",
+                      "H&amp;H Automotive",
+                      "CRS Auto Center &amp; Towing",
+                      "The Habit",
+                      "Community Living Thunder Bay",
+                      "Community Living Thunder Bay",
+                      "Community Living Thunder Bay",
+                      "Advanced 1 Stop Service &amp; Sales",
+                      "Anishnabek Employment and Training Services",
+                      "Alpha Court Community Mental Health and Addiction Services",
+                      "CBC Radio Thunder Bay",
+                      "The Finnish Book Store Inc.",
+                      "Blue Harbour Financial",
+                      "Half-Way Motors Power Sports"
+                    ],
+                    "x": {
+                      "__ndarray__": "Mv1Cgh3yYsG+P1MY6/FiwbS+f3a28WLBdpXX3QzyYsH9BuqnKfJiwd4Ii/dA8mLBxwmFwwTyYsENl3yDD/JiwRljw4uV8GLBlonZfSjyYsHUjvEoI/JiwU8GFkG/8WLBErNiNIPvYsFk5jIvVvJiwVQa1nhO8mLBG6MtNL/zYsG3xgzJkvNiwem2MGJz9GLBPubESib1YsFEWPWJR/JiwVKObSwJ8mLBt8ZU2+HzYsG3xlTb4fNiwbfGVNvh82LBt8ZU2+HzYsER0uaIAvNiwSquDgx/8mLBi9xjyuLxYsE7rgH6LPJiwbE4kk7v8mLB7q6fPPnyYsG3xlTb4fNiwfU7VbiE8WLBkKdltn3xYsHVfqi85PJiwcFnuL5k82LBXt71o7ryYsEAOhvG7fZiwegD/Ujn8WLBjGfNlVXzYsHH65gcEvNiweC2rgzf9GLB2F4odZDxYsH1uaqu1/FiwdHkXSMw8mLBY4371rXxYsHylKBZFPRiwfNK/MgG82LB0eRdIzDyYsGgoTqe0PRiwb3wPfP48mLBfmur2ojxYsGhW7lafPFiwSiRjp+48WLBcSOFnY3xYsHSZyB2pfFiwX0UJwWb8WLBLsNtmubwYsHt17oyUvFiwXmjH3il8WLB3BlDggbyYsFiwQS/tfFiwRwFsVe58WLBJd8jmYvxYsFrAaVk+vJiwQjqVaDc8mLBhg/XRZPxYsGKZZ2Ws/FiwQQjXV/Y8mLB1X6ovOTyYsHUiatozPxiwVKObSwJ8mLB7Td8rvvwYsHqfHdB8vNiwQcneD6j9WLBBt825Q7yYsE/cSaziPNiwTL9QoId8mLBQIiaYCvyYsH4dqV54vFiwbgdr3rx8mLBTlvMMHrxYsEH5L8mdfJiwTL9QoId8mLBn09gHYTxYsH2HCGdYv9iwZuvSzr882LBpxK86g/3YsGRcYDnOvZiwa+uw1Ct8WLBKkmUdjr2YsHy+H1L/vJiwWTmMi9W8mLB87ex4MH0YsHXEgTBs/JiwRCxgaCJ8WLBoUnmbPT1YsHl5mbRF/NiwYGfu3rc8GLB28RSETHyYsFkaLALIvJiwRHS5ogC82LBBkUmOMz1YsHBYb+WEPNiwS7DbZrm8GLB3lS8MJzxYsH9ig40afNiwYYP10WT8WLBfnlA/QHyYsH+UHVzq/RiweLOUxGK9GLBPqgwC2H1YsEMeuyf3PJiwWL7wx6j9WLBuGzUT8XyYsEl/1aJFPJiwcMfB8198mLBViO1DzjzYsEg6qCBufFiwYdhEGSF9GLBwyYz4bTyYsHF44Vnc/NiweWpqoy28mLBws4wSoHyYsH3YDJL9/Riwe5+Rota9WLBDHrsn9zyYsGQkP0CHvJiwSYQHZet9WLBFVBpOrnxYsGKyJB22/Viwe0jhr3F9mLBr67DUK3xYsHXra4Qa/NiwTUQsY0j8mLBs3pIBSHyYsHaIpV3vvNiwdc34jpM82LBAmXPFMbxYsHzyre8TvRiwYERtaWU9mLBc6OYCIbwYsFzeCtHOvNiwUOl3R379GLBMVYiWybzYsHKW6g4ofFiwaAndJiO8mLBk/4LcIH1YsEEjCZBFfJiwYOLGbBh82LBn5F5gEjzYsFcBDvbX/FiwZ90UrM282LBs53JuJPzYsHLrfB2FfJiwX4H39qp9GLBn9ta5jHzYsH4dqV54vFiwcMmM+G08mLBJGTaxa/xYsEiyejoa/NiwfO3seDB9GLBy63wdhXyYsH50y7KFPNiwVwOTIEh8mLB3PuZJ/jyYsHXra4Qa/Niwcj3W4H28mLBDZd8gw/yYsG/bb8SSPJiwXZnpPH88mLBqjyOGfjyYsHzt7HgwfRiwe3TUnGW8WLBFtTD/vnyYsGs6syczPBiwWkms1LL8WLBdBsVN0jyYsF0xD+Za/NiwaAv8rZC82LBinkNBRDzYsHR5F0jMPJiwZ+gR+PC8WLBmdh/pvHyYsHS6JRaGfJiwS7DbZrm8GLBC88qZ1zzYsE=",
+                      "dtype": "float64",
+                      "shape": [187]
+                    },
+                    "y": {
+                      "__ndarray__": "YZH7mj6SV0GaSJoj65FXQX7A+6xPkldB9BsKdxmSV0EWxM8w+pFXQc9mgoygkVdBe5tb51OSV0G5VVQ9SJJXQSPDf0uolFdBqacJr/2RV0ElSLxe+ZFXQVih7dq5kldB4WzHRSCZV0FVf/xV6ZRXQSiWCbyHkVdBsFbAVFWOV0EHSNIf9IxXQYZZ8y3PiVdBE7Kxg0CHV0Gf1vb4JpFXQfIIsA0ikldBDVJcjUeQV0ENUlyNR5BXQQ1SXI1HkFdBDVJcjUeQV0EurXoWWIpXQd2GOdtik1dB3QVEBI+UV0FfblEF3JFXQQFmAj9bjFdBD4zTT/COV0ENUlyNR5BXQfj+OM/akldBnxw/HteSV0HKF0EzuYxXQYJooeGGj1dBiRh2nOiNV0GjLtyOFohXQS+yA0+pkldB5yIVB2OOV0GhzG0ooolXQWqOGQhGh1dBCUFNFKKSV0ExKO820pJXQc0H80Qek1dB/WZW0caSV0Hxi8xXw41XQZFhUhmUj1dBzQfzRB6TV0FVoAbTOodXQdl0OFQWildBRY5fdNmSV0GKStcSx5JXQaAsJjS/kldBmuASucySV0GgL8NtzJJXQVri7nyHkldBNS/TzB+UV0HPbW0QQZNXQQLkdoG/kldBIWevPg6SV0GkHYFqx5JXQU3Djya9kldByMVDB7CSV0HhbvE+mI5XQZeNh97JjldByypsg5qSV0HKrkaTzZJXQZ0Qv0U/ildByhdBM7mMV0HCW47cNY9XQfIIsA0ikldBREQRVgWUV0Gc1THtXopXQfW4O6IVh1dBYv0gWRySV0EylRjOvI5XQWGR+5o+kldBOzZSx+CRV0FZp7VXg5RXQfjQXtQdildBHq1NCZWSV0FRUdJTo4tXQWGR+5o+kldBBfOz6C2UV0FyzlSO3oBXQTb0j6ExlldBge//jx2IV0FLWcleXYhXQWeswCZSk1dBl0EP7GaIV0EQrfGTD45XQVV//FXplFdB7l/I0AqLV0Ez9bStkZFXQWN8J+60kldB3rZbxoSIV0HnTeMUuYlXQa89uuQolFdB1YUMOamEV0EWSN5AOZJXQS6tehZYildBryrCW/WHV0E1J2oc5o5XQTUv08wflFdBoqNlAGySV0GevBcOa45XQcsqbIOakldB5rCjBhiSV0H5LtBnQIdXQZJ5r/xajVdBz/uWrl2KV0GwQNz/lY1XQc/aNBTPiVdBxQ0oAH6PV0F916bxMZVXQec5a/gHjFdBD2Y3qdKNV0FTsGcCK5JXQcinRuJbkFdBdBsVs+aNV0E89mDtfo9XQVL5ym8EkVdBpomo8JWUV0Eh+R1HKotXQVKzKMlYi1dBsEDc/5WNV0FJykoeHZJXQR4H82LPiVdBkVSvY+SSV0FcY5p0fIlXQYgZio3ciVdBZ6zAJlKTV0Hbv3aUY45XQR6+SWxEkldB8hCJyf+RV0GXeCLN2Y5XQRq6Bm8Gj1dBP2l5mAWTV0FkRnaJlIhXQXm0X2RhiFdBCKbGU8OUV0HNJZxx+5NXQcGnQjtdi1dBkqr1e+KKV0HF3HEqXZJXQSeCAkZkk1dBHLt+Nc+JV0HiAwYVI5JXQbcLM0kyjldBjYhm0D2VV0Eg/5FJPZNXQZHlnQqgjVdBZH7P6PeMV0HjA26aLJJXQeTUUUtnkFdBh/FfUpeKV0FZp7VXg5RXQXQbFbPmjVdBKOhkvdmSV0EaZa7AcJVXQe5fyNAKi1dB4wNumiySV0F/+uCOtopXQecE7KMSkldBjkk1X0KKV0Hbv3aUY45XQWUbYkcrj1dBuVVUPUiSV0En+1p52JBXQV8zTT2vj1dBK1+pBK+NV0HuX8jQCotXQU3hVEP4kldBt5gwrb6TV0GDgwpXQpRXQVM/1c0Qk1dB6zhaw3+QV0Fc/A1EipJXQfGnVqVXi1dBfi9GYzGPV0HNB/NEHpNXQZDc9vA5kldBzS8TEJ2KV0E6Z84WK5JXQTUv08wflFdBgEPonGeQV0E=",
+                      "dtype": "float64",
+                      "shape": [187]
+                    }
+                  },
+                  "selected": { "id": "1060", "type": "Selection" },
+                  "selection_policy": { "id": "1059", "type": "UnionRenderers" }
+                },
+                "id": "1002",
+                "type": "ColumnDataSource"
+              },
+              {
+                "attributes": {
+                  "overlay": { "id": "1058", "type": "BoxAnnotation" }
+                },
+                "id": "1032",
+                "type": "BoxZoomTool"
+              },
+              { "attributes": {}, "id": "1059", "type": "UnionRenderers" },
+              {
+                "attributes": {
+                  "dimension": 1,
+                  "ticker": { "id": "1022", "type": "MercatorTicker" }
+                },
+                "id": "1029",
+                "type": "Grid"
+              },
+              {
+                "attributes": {
+                  "ticker": { "id": "1013", "type": "MercatorTicker" }
+                },
+                "id": "1020",
+                "type": "Grid"
+              },
+              {
+                "attributes": { "dimension": "lat" },
+                "id": "1024",
+                "type": "MercatorTickFormatter"
+              },
+              { "attributes": {}, "id": "1060", "type": "Selection" },
+              { "attributes": {}, "id": "1010", "type": "LinearScale" },
+              { "attributes": {}, "id": "1034", "type": "ResetTool" },
+              { "attributes": {}, "id": "1008", "type": "LinearScale" },
+              {
+                "attributes": {
+                  "active_drag": "auto",
+                  "active_inspect": "auto",
+                  "active_multi": null,
+                  "active_scroll": "auto",
+                  "active_tap": "auto",
+                  "tools": [
+                    { "id": "1030", "type": "PanTool" },
+                    { "id": "1031", "type": "WheelZoomTool" },
+                    { "id": "1032", "type": "BoxZoomTool" },
+                    { "id": "1033", "type": "SaveTool" },
+                    { "id": "1034", "type": "ResetTool" },
+                    { "id": "1035", "type": "HelpTool" },
+                    { "id": "1036", "type": "HoverTool" }
+                  ]
+                },
+                "id": "1037",
+                "type": "Toolbar"
+              },
+              {
+                "attributes": { "dimension": "lon" },
+                "id": "1015",
+                "type": "MercatorTickFormatter"
+              },
+              {
+                "attributes": { "dimension": "lon" },
+                "id": "1013",
+                "type": "MercatorTicker"
+              },
+              { "attributes": {}, "id": "1033", "type": "SaveTool" },
+              { "attributes": {}, "id": "1030", "type": "PanTool" },
+              {
+                "attributes": {
+                  "fill_alpha": { "value": 0.1 },
+                  "fill_color": { "value": "#1f77b4" },
+                  "line_alpha": { "value": 0.1 },
+                  "line_color": { "value": "#1f77b4" },
+                  "size": { "units": "screen", "value": 8 },
+                  "x": { "field": "x" },
+                  "y": { "field": "y" }
+                },
+                "id": "1049",
+                "type": "Circle"
+              }
+            ],
+            "root_ids": ["1003"]
+          },
+          "title": "Bokeh Application",
+          "version": "1.3.4"
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      (function () {
+        var fn = function () {
+          Bokeh.safely(function () {
+            (function (root) {
+              function embed_document(root) {
+                var docs_json = document.getElementById("1133").textContent;
+                var render_items = [
+                  {
+                    docid: "f8230f40-e729-4126-8aef-40623c9db716",
+                    roots: { "1003": "5e90a2c2-b16c-4191-912d-b3a4952655f6" },
+                  },
+                ];
+                root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                var attempts = 0;
+                var timer = setInterval(
+                  function (root) {
+                    if (root.Bokeh !== undefined) {
+                      embed_document(root);
+                      clearInterval(timer);
+                    }
+                    attempts++;
+                    if (attempts > 100) {
+                      console.log(
+                        "Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is     missing"
+                      );
+                      clearInterval(timer);
+                    }
+                  },
+                  10,
+                  root
+                );
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
